@@ -21,14 +21,14 @@
     left: 0;
     top: 0;
     z-index: 10;
-    background-color: #fff;
+    background-color: #0a0a0a;
     visibility: hidden;
     opacity: 0;
 }
 .chocolat-overlay.chocolat-visible {
     transition: opacity var(--chocolat-transition-time), visibility 0s;
     visibility: visible;
-    opacity: 0.8;
+    opacity: 0.94;
 }
 
 .chocolat-wrapper {
@@ -71,20 +71,16 @@
 
 .chocolat-image-wrapper {
     position: fixed;
-    width: 0px;
-    height: 0px;
     left: 50%;
     top: 50%;
     z-index: 14;
-    text-align: left;
+    text-align: center;
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.chocolat-image-wrapper .chocolat-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 .chocolat-wrapper .chocolat-left {
     width: 50px;
     height: 100px;
@@ -219,21 +215,15 @@ body.chocolat-open > .chocolat-image-wrapper {
     transition: margin .2s ease;
 }
 
-/* uncomment to hide controls when zoomed-in*/
-/*
-.chocolat-zoomable .chocolat-top,
-.chocolat-zoomable .chocolat-bottom,
-.chocolat-zoomable .chocolat-right,
-.chocolat-zoomable .chocolat-left {
-    transition: opacity .3s ease, visibility 0s .3s;
-   opacity: 1;
+/* Centrado e integración visual con el portfolio */
+.chocolat-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
-.chocolat-zoomable.chocolat-zoomed .chocolat-top,
-.chocolat-zoomable.chocolat-zoomed .chocolat-bottom,
-.chocolat-zoomable.chocolat-zoomed .chocolat-right,
-.chocolat-zoomable.chocolat-zoomed .chocolat-left {
-    visibility: hidden;
-    opacity: 0;
+.chocolat-wrapper .chocolat-bottom {
+    background: rgba(10, 10, 10, 0.85);
+    color: #b3b3b2;
+    font-size: 0.8rem;
 }
-*/

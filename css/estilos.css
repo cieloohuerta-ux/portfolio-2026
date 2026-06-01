@@ -43,7 +43,6 @@ ul {
 
 img {
     display: block;
-    max-width: 100%;
 }
 
 .seccion__linea {
@@ -91,9 +90,7 @@ img {
 .btn--filled {
     background-color: var(--color-acento);
     color: var(--color-negro);
-    border: none;
     font-weight: 600;
-    text-transform: lowercase;
 }
 
 .scroll-arrow {
@@ -147,13 +144,30 @@ img {
     max-width: 1400px;
     margin: 0 auto;
 }
-
+/* acá hice otra animación para el logo y para sumar más a el trabajo */
 .nav__logo {
     font-family: var(--fuente-titulo);
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--color-blanco);
     letter-spacing: 0.05em;
+    background: linear-gradient(
+        90deg,
+        var(--color-blanco) 0%,
+        var(--color-blanco) 30%,
+        var(--color-acento) 50%,
+        var(--color-blanco) 70%,
+        var(--color-blanco) 100%
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo-shine 4s linear infinite;
+}
+
+@keyframes logo-shine {
+    0%   { background-position: 150% center; }
+    100% { background-position: -50% center; }
 }
 
 .nav__menu {
@@ -172,8 +186,7 @@ img {
     text-transform: uppercase;
 }
 
-.nav__link:hover,
-.nav__link--active {
+.nav__link:hover {
     color: var(--color-blanco);
 }
 
@@ -213,7 +226,12 @@ img {
     font-size: 0.9rem;
 }
 
+.hero__nombre {
+    margin-bottom: 32px;
+}
+
 .hero__nombre-cielo {
+    display: block;
     font-family: var(--fuente-titulo);
     font-size: clamp(2.8rem, 7vw, 5.5rem);
     font-weight: 800;
@@ -221,15 +239,14 @@ img {
 }
 
 .hero__nombre-huerta {
+    display: block;
     font-family: var(--fuente-titulo);
     font-size: clamp(3rem, 9vw, 7rem);
     font-weight: 500;
     line-height: 0.9;
-    margin-bottom: 32px;
 }
 
 .hero__descripcion {
-    font-size: 1rem;
     color: var(--color-gris-claro);
     margin-bottom: 36px;
     max-width: 440px;
@@ -239,21 +256,15 @@ img {
 .hero__botones {
     display: flex;
     gap: 16px;
-    flex-wrap: wrap;
 }
 
 .hero__imagen-wrapper {
-    flex: 1;
     position: relative;
     display: flex;
-    justify-content: flex-end;
 }
 
 .hero__imagen {
-    width: 100%;
-    max-width: 480px;
     border-radius: 5px;
-    object-fit: cover;
 }
 
 .hero__stat {
@@ -392,7 +403,6 @@ img {
 }
 
 .about__image {
-    width: 100%;
     border-radius: 5px;
 }
 
@@ -406,6 +416,7 @@ img {
     font-weight: 800;
     line-height: 1.05;
     margin-bottom: 36px;
+
 }
 
 .about__description p {
@@ -415,7 +426,7 @@ img {
     line-height: 1.75;
 }
 
-.about__description strong {
+.texto-destacado {
     color: var(--color-blanco);
     font-weight: 500;
 }
@@ -542,18 +553,15 @@ img {
     width: 100%;
     height: 200px;
     background-color: var(--color-fondo-campo);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
 .proyectos__card-imagen {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
 }
 
@@ -578,37 +586,6 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-}
-
-.audio-btn {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(10, 10, 10, 0.75);
-    border: 1px solid var(--color-acento);
-    color: var(--color-acento);
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(6px);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    z-index: 20;
-}
-
-.audio-btn:hover {
-    background-color: var(--color-acento);
-    color: var(--color-negro);
-    transform: scale(1.08);
-}
-
-.audio-btn--playing {
-    background-color: var(--color-acento);
-    color: var(--color-negro);
 }
 
 .footer__logo {
@@ -647,6 +624,45 @@ img {
     color: var(--color-acento);
 }
 
+.audio-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-acento);
+    border: none;
+    color: var(--color-negro);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 22px rgba(200, 240, 94, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    z-index: 10;
+}
+
+.audio-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 36px rgba(200, 240, 94, 0.85);
+}
+
+.audio-btn__icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.audio-btn--playing {
+    animation: audio-pulse 2s ease-in-out infinite;
+}
+/* Animación de pulso para el botón de audio */
+@keyframes audio-pulse {
+    0%, 100% { box-shadow: 0 0 22px rgba(200, 240, 94, 0.55); }
+    50%       { box-shadow: 0 0 44px rgba(200, 240, 94, 1); }
+}
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -661,10 +677,6 @@ img {
     .hero__imagen-wrapper {
         justify-content: center;
         width: 100%;
-    }
-
-    .hero__imagen {
-        max-width: 100%;
     }
 
     .about__content {
@@ -689,7 +701,7 @@ img {
         gap: 40px;
     }
 }
-
+/*  comienzo de responsive*/
 @media (max-width: 768px) {
     .nav__inner {
         padding: 16px 20px;

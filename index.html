@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cielo Huerta — Diseñadora Gráfica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="favicon_ch.ico" type="image/x-icon">
 </head>
+
 <body>
 
     <nav class="nav">
         <div class="nav__inner">
             <a href="index.html" class="nav__logo">CIELO</a>
             <ul class="nav__menu">
-                <li><a href="sobre-mi.html" class="nav__link">SOBRE MÍ</a></li>
-                <li><a href="habilidades.html" class="nav__link">HABILIDADES</a></li>
-                <li><a href="proyecto.html" class="nav__link">PROYECTOS</a></li>
+                <li><a href="html/sobre-mi.html" class="nav__link">SOBRE MÍ</a></li>
+                <li><a href="html/habilidades.html" class="nav__link">HABILIDADES</a></li>
+                <li><a href="html/proyecto.html" class="nav__link">PROYECTOS</a></li>
                 <li><a href="#contacto" class="nav__link">CONTACTO</a></li>
             </ul>
         </div>
@@ -34,22 +39,26 @@
                     <span class="hero__linea"></span>
                     <p class="hero__ciudad">Diseño gráfico · Buenos Aires</p>
                 </div>
-                <h1 class="hero__nombre-cielo">CIELO</h1>
-                <h1 class="hero__nombre-huerta">HUERTA</h1>
+                <h1 class="hero__nombre">
+                    <span class="hero__nombre-cielo">CIELO</span>
+                    <span class="hero__nombre-huerta">HUERTA</span>
+                </h1>
                 <p class="hero__descripcion">
-                    Estudiante de diseño gráfico con interés en la creatividad, la identidad visual y el desarrollo de proyectos modernos y funcionales.
+                    Estudiante de diseño gráfico con interés en la creatividad, la identidad visual y el desarrollo de
+                    proyectos modernos y funcionales.
                 </p>
                 <div class="hero__botones">
                     <a href="#contacto" class="btn btn--outline">TRABAJEMOS JUNTOS</a>
-                    <a href="proyecto.html" class="btn btn--filled">ver proyectos</a>
+                    <a href="html/proyecto.html" class="btn btn--filled">ver proyectos</a>
                 </div>
             </div>
 
             <div class="hero__imagen-wrapper">
                 <div class="hero__stat">
-                    <p class="hero__stat-texto">04+<br>Años estudiando</p>
+                    <p class="hero__stat-texto">04+</p>
+                    <p class="hero__stat-texto">Años estudiando</p>
                 </div>
-                <img src="img/img_ch.png" alt="Cielo Huerta" class="hero__imagen">
+                <img src="img/img_ch.png" alt="Cielo Huerta" class="hero__imagen" width="644" height="558">
                 <button class="audio-btn" id="audioBtn" aria-label="Reproducir música">
                     <span class="audio-btn__icon" id="audioIcon">♪</span>
                 </button>
@@ -67,7 +76,8 @@
                 <div class="contacto__izquierda">
                     <h2 class="contacto__titulo">Hablemos.</h2>
                     <p class="contacto__descripcion">
-                        Estoy disponible para proyectos freelance, colaboraciones creativas y oportunidades de prácticas profesionales.
+                        Estoy disponible para proyectos freelance, colaboraciones creativas y oportunidades de prácticas
+                        profesionales.
                     </p>
                     <a href="https://www.behance.net" target="_blank" class="contacto__red">Behance</a>
                     <a href="https://www.instagram.com" target="_blank" class="contacto__red">Instagram</a>
@@ -82,7 +92,8 @@
                             <input type="text" class="formulario__input" placeholder="nombre completo" required>
                         </div>
                         <div>
-                            <textarea class="formulario__textarea" placeholder="contame de tu proyecto..." required></textarea>
+                            <textarea class="formulario__textarea" placeholder="contame de tu proyecto..."
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn btn--filled formulario__btn">enviar mensaje</button>
                     </form>
@@ -96,16 +107,16 @@
         <a href="index.html" class="footer__logo">CIELO</a>
         <p class="footer__copy">© 2025 Cielo Huerta — Diseñadora Gráfica</p>
         <ul class="footer__menu">
-            <li><a href="proyecto.html" class="footer__link">PROYECTOS</a></li>
-            <li><a href="#contacto" class="footer__link">CONTACTO</a></li>
-            <li><a href="sobre-mi.html" class="footer__link">SOBRE MÍ</a></li>
+            <li><a href="html/proyecto.html" class="footer__link">PROYECTOS</a></li>
+            <li><a href="index.html#contacto" class="footer__link">CONTACTO</a></li>
+            <li><a href="html/sobre-mi.html" class="footer__link">SOBRE MÍ</a></li>
         </ul>
     </footer>
 
     <script>
         const audio = document.getElementById('bgaudio');
-        const btn   = document.getElementById('audioBtn');
-        const icon  = document.getElementById('audioIcon');
+        const btn = document.getElementById('audioBtn');
+        const icon = document.getElementById('audioIcon');
 
         btn.addEventListener('click', () => {
             if (audio.paused) {
@@ -121,4 +132,5 @@
     </script>
 
 </body>
+
 </html>
