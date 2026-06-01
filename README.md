@@ -13,3 +13,4 @@ Algo similar me pasó con la limpieza del CSS y la eliminación de código muert
 En general, este trabajo me ayudó a aprender muchas cosas nuevas y a entender mejor cómo se relacionan HTML y CSS para construir una página completa. Aunque por momentos fue difícil y estresante, también fue interesante ver cómo el proyecto iba tomando forma a medida que agregaba etiquetas. Este trabajo lo termino con más conocimientos que cuando lo empecé y con la web de mi portfolio final, que me sirve y me gusta el resultado.
 
 La medida de pantalla en la que lo visualizo es de: 1440 × 780 px.
+(el .ds_store, es el mismo archivo que en el tp 1 tampoco podia eliminar)
